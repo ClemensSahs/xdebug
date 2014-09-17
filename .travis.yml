@@ -10,7 +10,6 @@ before_script:
     - phpize
     - ./configure --enable-xdebug
     - make
-    - phpenv config-add ./travis/myconfig.ini
 
 script:
     - php -f ./travis/copy-binary.php

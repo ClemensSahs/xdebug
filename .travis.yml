@@ -11,6 +11,7 @@ notifications:
 
 before_script:
     - phpize && ./configure && make
+    - phpenv config-add ./travis/myconfig.ini
 
 script:
     - make test | tee test-output.txt && grep 'TEST SUMMARY$' test-output.txt > /dev/null

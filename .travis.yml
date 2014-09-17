@@ -13,5 +13,5 @@ before_script:
     - phpenv config-add ./travis/myconfig.ini
 
 script:
-    - php -E "<?php phpinfo(); ?>"
+    - php -E "phpinfo();"
     - make test | tee test-output.txt && grep 'TEST SUMMARY$' test-output.txt > /dev/null

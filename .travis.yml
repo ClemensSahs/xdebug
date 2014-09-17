@@ -10,7 +10,9 @@ notifications:
     email: false
 
 before_script:
-    - phpize && ./configure && make
+    - phpize
+    - ./configure --enable-xdebug
+    - make
     - phpenv config-add ./travis/myconfig.ini
 
 script:

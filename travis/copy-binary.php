@@ -2,7 +2,7 @@
 
 
 $extDirFormat = ini_get('extension_dir') . '/%s';
-$sourceDirFormat = realpath(__DIR__ . '/../modules/%s');
+$sourceDirFormat = realpath(__DIR__ . '/../modules') . '/%s';
 
 $fileName = 'xdebug.so';
 

@@ -6,5 +6,5 @@ $sourceDirFormat = realpath(__DIR__ . '/../modules') . '/%s';
 
 $fileName = 'xdebug.so';
 
-var_dump(sprintf($sourceDirFormat, $fileName),
+copy(sprintf($sourceDirFormat, $fileName),
          sprintf($extDirFormat, $fileName));

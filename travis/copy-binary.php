@@ -1,7 +1,7 @@
 <?php
 
 
-$extDirFormat = phpinfo('extension_dir');
+$extDirFormat = ini_get('extension_dir');
 $sourceDirFormat = __DIR__ .'/../modules/';
 
 $fileName = 'xdebug.so';

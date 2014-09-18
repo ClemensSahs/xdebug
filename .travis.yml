@@ -6,11 +6,16 @@ php:
 notifications:
     email: false
 
-before_script:
+before_install:
     - phpize
+
+install:
     - ./configure --enable-xdebug
     - make
     - make install
+
+before_script:
+    - phpenv config-add myconfig.ini
 
 script:
     - php -f ./travis/copy-binary.php

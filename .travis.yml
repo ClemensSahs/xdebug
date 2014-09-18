@@ -10,6 +10,7 @@ before_script:
     - phpize
     - ./configure --enable-xdebug
     - make
+    - make install
 
 script:
     - php -f ./travis/copy-binary.php

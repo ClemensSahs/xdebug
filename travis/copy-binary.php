@@ -6,5 +6,13 @@ $sourceDirFormat = realpath(__DIR__ . '/../modules') . '/%s';
 
 $fileName = 'xdebug.so';
 
-copy(sprintf($sourceDirFormat, $fileName),
-         sprintf($extDirFormat, $fileName));
+$sourceFile = sprintf($sourceDirFormat, $fileName);
+$extFile = sprintf($sourceDirFormat, $fileName);
+
+copy($sourceFile, $extFile);
+
+if (file_get_contents($sourceFile) === file_get_contents($extFile)) {
+    exit(0);
+}
+
+exit(1);

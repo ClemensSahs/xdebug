@@ -13,4 +13,4 @@ before_script:
 
 script:
     - php -f ./travis/copy-binary.php
-    - make test | tee test-output.txt && grep 'TEST SUMMARY$' test-output.txt > /dev/null
+    - make test

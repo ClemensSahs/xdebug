@@ -15,8 +15,7 @@ install:
     - make install
 
 before_script:
-    - phpenv config-add myconfig.ini
+    - phpenv config-add ./test/myconfig.ini
 
 script:
-    - php -f ./travis/copy-binary.php
     - make test

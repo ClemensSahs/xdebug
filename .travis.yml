@@ -3,6 +3,10 @@ language: php
 php:
     - 5.5
 
+env:
+  global:
+    - TEST_PHP_DETAILED= 1
+
 notifications:
     email: false
 
